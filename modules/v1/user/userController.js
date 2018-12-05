@@ -7,7 +7,8 @@ const config = {
 };
 const userCtr = {};
 userCtr.ocrImage = (req, res) => {
-  tesseract.recognize('/Users/prachi.thakkar/Downloads/test.png', config)
+  console.log(process.env.PWD + '/image/test.png')
+  tesseract.recognize('/Users/prachi.thakkar/Downloads/line-indent.png', config)
     .then((text) => {
       res.status(200).json({ success: text });
     }).catch((err) => {
