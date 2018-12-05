@@ -1,0 +1,25 @@
+{
+  "name": "demo-ocr",
+  "version": "0.0.1",
+  "description": "Demo - OCR",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Prachi Thacker",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "email-templates-v2": "^2.0.3",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "mongoose": "^5.3.14",
+    "morgan": "^1.9.1",
+    "node-cron": "^2.0.3",
+    "node-tesseract-ocr": "^0.1.0",
+    "nodemailer": "^4.7.0",
+    "path": "^0.12.7"
+  }
+}
