@@ -33,12 +33,15 @@ app.use(morgan('combined'));
 // Router
 app.use('/api/v1', require('./routes/v1'));
 app.use('/app', require('./routes/common')); // for common page
-// Start server
-const server = http.createServer(app);
 
-server.listen(process.env.PORT, () => {
+// Start server
+//const server = http.createServer(app);
+const server = http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end("Welcom to AWS, Node OCR - Optical Character Recognition demo");
+}).listen(3000);
+
+server.listen(process.env.PORT, () => {
 });
 
 module.exports = app;
