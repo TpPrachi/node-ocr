@@ -37,6 +37,8 @@ app.use('/app', require('./routes/common')); // for common page
 const server = http.createServer(app);
 
 server.listen(process.env.PORT, () => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end("Welcom to AWS, Node OCR - Optical Character Recognition demo");
 });
 
 module.exports = app;
