@@ -41,7 +41,7 @@ app.get('/', function (req, res) {
   res.send('Welcom to AWS, Node OCR - Optical Character Recognition demo...');
 });
 
-server.listen(process.env.PORT, (req, res) => {
+server.listen(process.env.PORT, () => {
   console.log('Node project running...');
 });
 
