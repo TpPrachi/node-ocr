@@ -37,7 +37,12 @@ app.use('/app', require('./routes/common')); // for common page
 // Start server
 const server = http.createServer(app);
 
-server.listen(process.env.PORT, () => {
+app.get('/', function (req, res) {
+  res.send('Welcom to AWS, Node OCR - Optical Character Recognition demo...');
+});
+
+server.listen(process.env.PORT, (req, res) => {
+  console.log('Node project running...');
 });
 
 module.exports = app;
